@@ -1,0 +1,5 @@
+setup.cfg
+setup.py
+spacy_iwnlp/__init__.py
+spacy_iwnlp/senti_ws_entry.py
+spacy_iwnlp/senti_ws_wrapper.py
