@@ -14,8 +14,3 @@ class spaCySentiWS(object):
 
     def get_sentiment(self, token):
         return self.sentiws.determine(token.text, pos_universal_google=token.pos_)
-
-
-
-
-

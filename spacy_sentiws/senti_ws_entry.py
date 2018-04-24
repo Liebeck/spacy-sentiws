@@ -13,4 +13,4 @@ class SentiWSEntry(object):
         return (self.form, self.pos) == (other.form, other.pos)
 
     def __ne__(self, other):
-        return not(self == other)
+        return not (self == other)

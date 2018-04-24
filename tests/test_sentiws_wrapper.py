@@ -21,4 +21,3 @@ class SentiWSWrapperTest(unittest.TestCase):
         assert doc[6]._.sentiws == 0.4629
         assert doc[7]._.sentiws is None
         assert doc[8]._.sentiws is None
-
