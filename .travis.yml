@@ -1,0 +1,15 @@
+language: python
+python:
+- "3.4"
+
+install:
+- "pip install -r .travis/requirements.txt"
+- "pip install -U spacy"
+- "python -m spacy download de"
+
+before_script:
+- chmod +x .travis/download_sentiws.sh
+- .travis/download_sentiws.sh
+
+script:
+- python3 -m py.test
