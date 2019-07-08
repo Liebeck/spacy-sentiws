@@ -43,8 +43,8 @@ class SentiWSWrapper(object):
 
     def load_files(self, directory):
         self.entries = {}
-        self.entries.update(self.load_file(directory + '/SentiWS_v1.8c_Positive.txt'))
-        self.entries.update(self.load_file(directory + '/SentiWS_v1.8c_Negative.txt'))
+        self.entries.update(self.load_file(directory + '/SentiWS_v2.0_Positive.txt'))
+        self.entries.update(self.load_file(directory + '/SentiWS_v2.0_Negative'))
 
     def process_line(self, line):
         entries = {}
