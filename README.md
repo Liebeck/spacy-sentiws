@@ -24,4 +24,4 @@ for token in doc:
 ``` bash
 pip install spacy-sentiws
 ```
-2. Download the SentiWS http://pcai056.informatik.uni-leipzig.de/downloads/etc/SentiWS/SentiWS_v1.8c.zip and unzip it.
+2. Download the SentiWS http://pcai056.informatik.uni-leipzig.de/downloads/etc/SentiWS/SentiWS_v2.0.zip and unzip it.
