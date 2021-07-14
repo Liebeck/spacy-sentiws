@@ -2,7 +2,7 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/Liebeck/spacy-sentiws/master/LICENSE.md)
 [![Build Status](https://api.travis-ci.org/Liebeck/spacy-sentiws.svg?branch=master)](https://travis-ci.org/Liebeck/spacy-sentiws)
 
-This package uses the [spaCy 2.0 extensions](https://spacy.io/usage/processing-pipelines#extensions) to add [SentiWS](http://wortschatz.uni-leipzig.de/en/download) as German sentiment score directly into your spaCy pipeline.
+This package uses the [spaCy 3 extensions](https://spacy.io/usage/processing-pipelines#extensions) to add [SentiWS](http://wortschatz.uni-leipzig.de/en/download) as German sentiment score directly into your spaCy pipeline.
 
 
 ## Usage
@@ -11,8 +11,7 @@ import spacy
 from spacy_sentiws import spaCySentiWS
 
 nlp = spacy.load('de')
-sentiws = spaCySentiWS(sentiws_path='data/sentiws/')
-nlp.add_pipe(sentiws)
+nlp.add_pipe('sentiws', config={'sentiws_path': 'data/sentiws/'})
 doc = nlp('Die Dummheit der Unterwerfung blüht in hübschen Farben.')
 
 for token in doc:

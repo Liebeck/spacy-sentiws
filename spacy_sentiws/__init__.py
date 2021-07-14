@@ -1,6 +1,11 @@
 from spacy.tokens import Token
 from spacy_sentiws.senti_ws_wrapper import SentiWSWrapper
+from spacy.language import Language
 
+
+@Language.factory("sentiws")
+def create_component(nlp: Language, name, sentiws_path):
+    return spaCySentiWS(sentiws_path=sentiws_path)
 
 class spaCySentiWS(object):
     def __init__(self, sentiws_path):
