@@ -6,9 +6,8 @@ from spacy_sentiws import spaCySentiWS
 class SentiWSWrapperTest(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        self.nlp = spacy.load('de')
-        sentiws = spaCySentiWS(sentiws_path='data/sentiws/')
-        self.nlp.add_pipe(sentiws)
+        self.nlp = spacy.load('de_core_news_sm')
+        self.nlp.add_pipe('sentiws', config={'sentiws_path': 'data/sentiws/'})        
 
     def test_example1(self):
         doc = self.nlp('Die Dummheit der Unterwerfung blüht in hübschen Farben.')

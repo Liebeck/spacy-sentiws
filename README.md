@@ -10,7 +10,7 @@ This package uses the [spaCy 3 extensions](https://spacy.io/usage/processing-pip
 import spacy
 from spacy_sentiws import spaCySentiWS
 
-nlp = spacy.load('de')
+nlp = spacy.load('de_core_news_sm')
 nlp.add_pipe('sentiws', config={'sentiws_path': 'data/sentiws/'})
 doc = nlp('Die Dummheit der Unterwerfung blüht in hübschen Farben.')
 
@@ -23,4 +23,16 @@ for token in doc:
 ``` bash
 pip install spacy-sentiws
 ```
-2. Download the SentiWS http://pcai056.informatik.uni-leipzig.de/downloads/etc/SentiWS/SentiWS_v2.0.zip and unzip it.
+2. Download the SentiWS http://pcai056.informatik.uni-leipzig.de/downloads/etc/SentiWS/SentiWS_v2.0.zip and unzip it. The directory `data/sentiws` will be used by default.
+
+## Local development
+Use develop.py to extend the functionality
+
+How to run the tests
+``` bash
+python -m unittest
+```
+
+## Contributors
+* [stereolith](https://github.com/stereolith) (Thanks for upgrading to spaCy 3)
+
