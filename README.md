@@ -33,6 +33,13 @@ How to run the tests
 python -m unittest
 ```
 
+How to update pip package: https://widdowquinn.github.io/coding/update-pypi-package/
+
+```
+python setup.py sdist bdist_wheel 
+twine upload dist/PACKAGENAME-VERSION.tar.gz
+```
+
 ## Contributors
 * [stereolith](https://github.com/stereolith) (Thanks for upgrading to spaCy 3)
 
